@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+
+    font-family: sans-serif;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: white;
+    position: relative;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-height: 60px;
+    z-index: 999;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+header a {
+    font-weight: 100;
+    text-decoration: none;
+    color: black;
+    position: absolute;
+    top: 3vh;
+
+}
+
+.logo {
+    max-width: 60px;
+    max-height: 60px;
+}
+
+.whiteMe {
+    background-color: white;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 11;
+    opacity: 0;
+}
+
+figure {
+    text-align: center;
+    width: 100%;
+}
+
+.scroll {
+    position: fixed;
+    bottom: 22vh;
+    margin-left: -5vh;
+    max-height: 60px;
+    animation: bounce 1s 2s alternate infinite ease-in;
+}
+
+@keyframes bounce {
+    to {
+        bottom: 18vh
+    }
+}
+
+figcaption {
+    position: fixed;
+    bottom: 33vh;
+    width: 100%
+}
+
+.overlayIndex {
+    background-image: url(images/GettyImages-538096543_medium.jpg);
+    background-size: 100% 100vh;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
+    position: relative;
+    background-color: white;
+    opacity: 0;
+    position: fixed;
+    animation: appear 1.5s 1s forwards;
+}
+
+
+@keyframes appear {
+    to {
+        opacity: .6;
+    }
+}
+
+.title {
+    width: 100%;
+    font-size: 1.3em;
+    padding-top: 20%;
+    text-align: center;
+    position: fixed;
+    opacity: 0;
+    animation: appearTitle 1.5s 1s forwards;
+
+}
+
+.title h2 {
+    font-weight: 100
+}
+
+@keyframes appearTitle {
+    to {
+        opacity: .7;
+    }
+}
+
+.overlay {
+    position: absolute;
+    top: 140vh;
+}
+
+.map {
+    position: relative;
+    z-index: 21;
+    width: 50%;
+    margin-left: 25%;
+    margin-bottom: 30vh;
+    cursor: pointer;
+    transition: width .5s;
+
+}
+
+.map:hover {
+    width: 60%;
+    margin-left: 20%;
+}
+
+.overlayText {
+    padding: 10%;
+    position: relative;
+    color: black;
+    z-index: 22;
+    opacity: 1;
+}
+
+.fadeMe {
+    opacity: 1;
+    animation: fadeMe 1s .5s forwards
+}
+
+@keyframes fadeMe {
+    to {
+        opacity: 0;
+    }
+}
+
+/*map page*/
+
+.mainMap {
+    padding-top: 100px;
+    width: 100%
+}
+
+.usa {
+    width: 150px;
+    height: 100px;
+    position: absolute;
+    top: 22vh;
+    left: 10vh;
+    cursor: pointer;
+    transition: background 2s ease;
+}
+
+.usa:hover {
+    background-color: blue;
+}
+
+@media screen and (min-width:800px) {
+
+    /*index*/
+    .title {
+        width: 100%;
+        padding-top: 10%;
+        font-size: 3em;
+    }
+
+
+    figcaption {
+        bottom: 14vh;
+    }
+
+
+
+    .map {
+        position: relative;
+        z-index: 21;
+        width: 20%;
+        margin-left: 40%;
+        margin-bottom: 30vh;
+    }
+
+    .map:hover {
+        width: 30%;
+        margin-left: 35%;
+    }
+
+
+    /*map page*/
+    .mainMap {
+        padding: 4%;
+        max-width: 92%;
+        max-height: 80vh;
+        padding-top: 100px;
+    }
+
+    .usa {
+        width: 200px;
+        height: 150px;
+        position: absolute;
+        top: 35vh;
+        left: 30vh;
+        cursor: pointer;
+    }
+
+    .usa:hover {
+        background-color: blue;
+    }
+
+
+}
