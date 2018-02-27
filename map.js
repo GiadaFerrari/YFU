@@ -1,21 +1,22 @@
 let goDest = $('.destination')
 
 
-goDest.click(()=>{
+goDest.click((c)=>{
     $('.fay').removeClass('fadeMeIn');
     $('.fay').addClass('fadeMe')
-    console.log('working on it')
     $('.fay').on('animationend', ()=> {
 
         document.querySelector('.mainMap').style.cssText = "display: none;"
 
-        fetch('countries.json').then(result => result.json()).then(data => create(data));})}
+        fetch('countries.json').then(result => result.json()).then(data => create(data));})
+        let clicked = c.target
 
 
-        function create(e){
+    console.log(clicked)
+     function create(elem){
+           if($(clicked).hasClass('usa')){
 
 
-                e.forEach((elem)=>{
             const mainTemplate = document.querySelector('.country').content;
 
             const postTemplate = document.querySelector('.post').content
@@ -25,18 +26,19 @@ goDest.click(()=>{
             const postClone = postTemplate.cloneNode(true);
 
 
-        myClone.querySelector('.background').cssText = "background-image: url(" + elem.himage + ")";
-        myClone.querySelector('.name').textContent = elem.country;
+        myClone.querySelector('.background').cssText = "background-image: url(" + elem[0].himage + ")";
+        myClone.querySelector('.name').textContent = elem[0].country;
 
 
-    console.log(elem.posts)
 
-        elem.posts.forEach((p)=>{
+        elem[0].posts.forEach((p)=>{
+
+postClone.querySelector('.flag').style.cssText = "background-image: url(" +elem[0].bimage+");";
             p.forEach((post)=>{
 
-                postClone.querySelector('.flag').src = elem.bimage;
-                postClone.querySelector('.number').textContent = p.number;
-                postClone.querySelector('.category').textContent = p.category;
+
+                postClone.querySelector('.number').textContent = post.number;
+                postClone.querySelector('.category').textContent = post.category;
 
 
                 postClone.querySelector('.firstimg').src = post.image
@@ -61,7 +63,12 @@ goDest.click(()=>{
 
 
 
-})}
+
+
+}
+
+
+}})
 
 
 

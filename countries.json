@@ -2,7 +2,7 @@
     {
         "country": "United States of America",
         "himage": "images/",
-        "bimage": ["images/", "images/", "images/"],
+        "bimage":"images/american-dream-cover.jpg",
         "posts":
         [
 
