@@ -31,6 +31,7 @@ header a {
     color: black;
     position: absolute;
     top: 3vh;
+    margin-left:-60px;
 
 }
 
@@ -69,7 +70,8 @@ figure {
     }
 }
 
-figcaption {
+.posts {height:100vh;}
+figcaption.scrollMe {
     position: fixed;
     bottom: 33vh;
     width: 100%
@@ -90,13 +92,13 @@ figcaption {
     background-color: white;
     opacity: 0;
     position: fixed;
-    animation: appear 1.5s 1s forwards;
+    animation: appear 1.5s 1.2s forwards;
 }
 
 
 @keyframes appear {
     to {
-        opacity: .6;
+        opacity: .7;
     }
 }
 
@@ -107,7 +109,7 @@ figcaption {
     text-align: center;
     position: fixed;
     opacity: 0;
-    animation: appearTitle 1.5s 1s forwards;
+    animation: appearTitle 2s .2s forwards;
 
 }
 
@@ -116,6 +118,7 @@ figcaption {
 }
 
 @keyframes appearTitle {
+    from {filter: blur(50px);}
     to {
         opacity: .7;
     }
@@ -143,7 +146,8 @@ figcaption {
 }
 
 .overlayText {
-    padding: 10%;
+    padding: 10% 20% 10% 20%;
+    font-size:1.2em;
     position: relative;
     color: black;
     z-index: 22;
@@ -181,12 +185,68 @@ figcaption {
 .usa:hover {
     background-color: blue;
 }
+
 /*template*/
 
+.tempy .background {
+    background-size: auto 100vh;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-top: 60px;
+    background-color: white;
+    opacity: .6;
+}
+}
+.countries {z-index: 333;
+position:relative;
+opacity: 1;}
 
-.tempy {height:200px;
-width:100%;
-margin-top:60px;}
+.countries h1 {
+
+    text-transform: uppercase;
+    position:fixed;
+    top:40vh;
+    width:100%;
+    text-align: center;
+    font-size:2.5em;
+    margin:auto;
+    z-index:1;
+}
+
+.appendPost {opacity:1;
+position:relative;
+z-index:333;}
+.tempy {
+    width: 100%;
+    margin-top: 60px;
+}
+
+.flag {
+
+    width: 100vw;
+    background-size: cover;
+    text-align: center;
+    background: linear-gradient (rgba(0,0,0,0), rgba (0,0,0,1))
+}
+
+.number {
+    font-size: 20em;
+    text-align: center;
+    width: 100%;
+   position:relative;
+
+}
+
+.posts img {max-width:20vh;
+max-height: 20vh;}
+
+
+
 
 @media screen and (min-width:800px) {
 
@@ -197,11 +257,7 @@ margin-top:60px;}
         font-size: 3em;
     }
 
-
-    figcaption {
-        bottom: 14vh;
-    }
-
+    figcaption.scrollMe {bottom:14vh}
 
 
     .map {
@@ -209,7 +265,7 @@ margin-top:60px;}
         z-index: 21;
         width: 20%;
         margin-left: 40%;
-        margin-bottom: 30vh;
+        margin-bottom: 10vh;
     }
 
     .map:hover {
@@ -238,6 +294,28 @@ margin-top:60px;}
     .usa:hover {
         background-color: blue;
     }
+/*template*/
+    .countries h1 {
 
+    font-size:5em;
+
+}
+    .posts {display: block;
+    height:200vh;}
+    .posts img {     display:block;
+        max-width:50vw;
+        max-height:50vw;
+        margin:1em;
+        }
+
+    .posts .firstimg {
+        float:left;
+
+    }
+
+    .posts .secondimg {
+        float:right;
+
+    }
 
 }

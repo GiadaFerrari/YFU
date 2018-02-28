@@ -1,78 +1,78 @@
 [
     {
         "country": "United States of America",
-        "himage": "images/",
+        "himage": "images/francy.jpg",
         "bimage":"images/american-dream-cover.jpg",
         "posts":
         [
 
             [
                {
-                    "image": "images/",
+                    "image": "images/test.jpg",
                     "number": "I",
                     "category": "DECISION",
-                    "caption": " ",
+                    "caption": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  ",
                     "paragraph": " "
                 },
                 {
-                    "image": "images/",
+                    "image":"images/test.jpg",
                     "number": "I",
                     "category": "DECISION",
-                    "caption": " ",
+                    "caption": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  ",
                     "paragraph": " "
                 },
                 {
-                    "image": "images/",
+                    "image": "",
                     "number": "I",
                     "category": "DECISION",
                     "caption": " ",
-                    "paragraph": " "
+                    "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  "
                 }
           ],
             [
               {
-                    "image": "images/",
-                    "caption": " ",
+                    "image": "images/test.jpg",
+                    "caption": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  ",
                     "number": "II",
                     "category": "EXPERIENCE",
                     "paragraph": " "
                 },
                 {
-                    "image": "images/",
-                    "caption": " ",
+                    "image": "images/test.jpg",
+                    "caption": " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
                     "number": "II",
                     "category": "EXPERIENCE",
                     "paragraph": " "
                 },
                 {
-                    "image": "images/",
+                    "image": "",
                     "caption": " ",
                     "number": "II",
                     "category": "EXPERIENCE",
-                    "paragraph": " "
+                    "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  "
                 }
           ],
             [
      {
-                    "image": "images/",
-                    "caption": " ",
+                    "image": "images/test.jpg",
+                    "caption": " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
                     "number": "III",
                     "category": "RETURN",
                     "paragraph": " "
                 },
                 {
-                    "image": "images/",
-                    "caption": " ",
+                    "image": "images/test.jpg",
+                    "caption": " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
                     "number": "III",
                     "category": "RETURN",
                     "paragraph": " "
                 },
                 {
-                    "image": "images/",
+                    "image": "",
                     "caption": " ",
                     "number": "III",
                     "category": "RETURN",
-                    "paragraph": " "
+                    "paragraph": " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 }
           ]
         ]
