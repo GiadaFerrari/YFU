@@ -25,13 +25,17 @@ header {
     flex-direction: column;
 }
 
+.hide {
+    display: none;
+}
+
 header a {
     font-weight: 100;
     text-decoration: none;
     color: black;
     position: absolute;
     top: 3vh;
-    margin-left:-60px;
+    margin-left: -60px;
 
 }
 
@@ -70,7 +74,10 @@ figure {
     }
 }
 
-.posts {height:100vh;}
+.posts {
+    height: 100vh;
+}
+
 figcaption.scrollMe {
     position: fixed;
     bottom: 33vh;
@@ -118,7 +125,9 @@ figcaption.scrollMe {
 }
 
 @keyframes appearTitle {
-    from {filter: blur(50px);}
+    from {
+        filter: blur(50px);
+    }
     to {
         opacity: .7;
     }
@@ -140,6 +149,7 @@ figcaption.scrollMe {
 
 }
 
+
 .map:hover {
     width: 60%;
     margin-left: 20%;
@@ -147,7 +157,7 @@ figcaption.scrollMe {
 
 .overlayText {
     padding: 10% 20% 10% 20%;
-    font-size:1.2em;
+    font-size: 1.2em;
     position: relative;
     color: black;
     z-index: 22;
@@ -169,22 +179,31 @@ figcaption.scrollMe {
 
 .mainMap {
     padding-top: 100px;
-    width: 100%
+    width: 100%;
+    z-index: 1;
+}
+
+.usaMap {
+    padding-top: 100px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity .5s ease-in;
+    z-index: 22;
 }
 
 .usa {
-    width: 150px;
-    height: 100px;
+    width: 200px;
+    height: 160px;
     position: absolute;
-    top: 22vh;
-    left: 10vh;
+    top: 18vh;
+    left: 14vh;
     cursor: pointer;
-    transition: background 2s ease;
+    z-index: 33;
 }
 
-.usa:hover {
-    background-color: blue;
-}
+
 
 /*template*/
 
@@ -201,26 +220,33 @@ figcaption.scrollMe {
     background-color: white;
     opacity: .6;
 }
+
 }
-.countries {z-index: 333;
-position:relative;
-opacity: 1;}
+
+.countries {
+    z-index: 333;
+    position: relative;
+    opacity: 1;
+}
 
 .countries h1 {
 
     text-transform: uppercase;
-    position:fixed;
-    top:40vh;
-    width:100%;
+    position: fixed;
+    top: 40vh;
+    width: 100%;
     text-align: center;
-    font-size:2.5em;
-    margin:auto;
-    z-index:1;
+    font-size: 2.5em;
+    margin: auto;
+    z-index: 1;
 }
 
-.appendPost {opacity:1;
-position:relative;
-z-index:333;}
+.appendPost {
+    opacity: 1;
+    position: relative;
+    z-index: 333;
+}
+
 .tempy {
     width: 100%;
     margin-top: 60px;
@@ -231,19 +257,26 @@ z-index:333;}
     width: 100vw;
     background-size: cover;
     text-align: center;
-    background: linear-gradient (rgba(0,0,0,0), rgba (0,0,0,1))
+    background: linear-gradient (rgba(0, 0, 0, 0), rgba (0, 0, 0, 1))
 }
 
+.flag1 {position:absolute;
+top:-120vh;
+    opacity:0;
+
+}
 .number {
     font-size: 20em;
     text-align: center;
     width: 100%;
-   position:relative;
+    position: relative;
 
 }
 
-.posts img {max-width:20vh;
-max-height: 20vh;}
+.posts img {
+    max-width: 20vh;
+    max-height: 20vh;
+}
 
 
 
@@ -257,7 +290,9 @@ max-height: 20vh;}
         font-size: 3em;
     }
 
-    figcaption.scrollMe {bottom:14vh}
+    figcaption.scrollMe {
+        bottom: 14vh
+    }
 
 
     .map {
@@ -277,44 +312,70 @@ max-height: 20vh;}
     /*map page*/
     .mainMap {
         padding: 4%;
-        max-width: 92%;
-        max-height: 80vh;
+        width: 92%;
         padding-top: 100px;
     }
 
     .usa {
         width: 200px;
-        height: 150px;
+        height: 250px;
         position: absolute;
-        top: 35vh;
-        left: 30vh;
+        top: 25vh;
+        left: 20vh;
         cursor: pointer;
+        z-index: 33;
     }
 
-    .usa:hover {
-        background-color: blue;
+    .usaMap {
+        position: absolute;
+        top: 0;
+
+        padding: 4%;
+        width: 92%;
+        padding-top: 100px;
+        opacity: 0;
+        transition: opacity .5s ease-in;
+        z-index: 22;
     }
-/*template*/
+
+
+    /*template*/
     .countries h1 {
 
-    font-size:5em;
+        font-size: 5em;
 
-}
-    .posts {display: block;
-    height:200vh;}
-    .posts img {     display:block;
-        max-width:50vw;
-        max-height:50vw;
-        margin:1em;
-        }
+    }
+
+    .flag {
+        max-height: 100%;
+        width: 60%;
+        margin-left: 20%;
+        filter: blur(10px);
+
+    }
+
+
+
+    .posts {
+        display: block;
+        height: 200vh;
+        width: 100vw;
+    }
+
+    .posts img {
+        display: block;
+        max-width: 50vw;
+        max-height: 50vw;
+        margin: 1em;
+    }
 
     .posts .firstimg {
-        float:left;
+        float: left;
 
     }
 
     .posts .secondimg {
-        float:right;
+        float: right;
 
     }
 
