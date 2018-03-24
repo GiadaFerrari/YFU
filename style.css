@@ -503,50 +503,73 @@ div.visible {
         position: relative;
     }
 
-    .top {
-        background-color: red;
-        height: 30vh;
+    .top
+    {   height: 30vh;
+          background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
         width: 25vw;
         position: absolute;
         top: 1vh;
         left: 37.5vw;
+        z-index:1;
+        transition:all 1s ease;
     }
 
+    .top:hover {z-index:3;}
+
     .bottom {
-        background-color: blue;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
         height: 30vh;
         width: 25vw;
         position: absolute;
         bottom:1vh;
         left:37.5vw;
+        z-index:1;
 
     }
+       .bottom:hover {z-index:3;}
 
     .right {
-        background-color: yellow;
+          background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
         height: 30vh;
         width: 25vw;
         position: absolute;
         right:18vw;
         bottom:25vh;
+                z-index:1;
     }
+    .right:hover {z-index:3;}
 
     .left {
-        background-color: green;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
         height: 30vh;
         width: 20vw;
         position: absolute;
         left:18vw;
         top:25vh;
+                z-index:1;
+
     }
+    .left:hover {z-index:3;}
 
     .main {
-        background-color: black;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
         height: 50vh;
         width: 40vw;
         position: absolute;
         left: 30vw;
         top: 15vh;
+                z-index:2;
+
     }
 
 
