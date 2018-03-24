@@ -93,7 +93,8 @@ function goBack(){
 }
 
 
-                  myClone.querySelectorAll('.name').forEach( (name)=> {name.textContent = elem[0].country;})
+                myClone.querySelectorAll('.name').forEach( (name)=> {name.textContent = elem[0].country;})
+                document.querySelector('.logo').style.cssText = "fill:" + elem[0].color+";"
                 myClone.querySelector('.name').style.cssText = "color:" + elem[0].color + ";"
                 myClone.querySelector('h1').style.cssText = "color:" + elem[0].color + ";"
                 myClone.querySelector('.capital').textContent = elem[0].capital;

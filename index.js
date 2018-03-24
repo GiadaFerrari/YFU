@@ -56,3 +56,5 @@ goMap.click(()=>{
     $('.overlay').on('transitionend', function () {
   window.location.href = "map.html"
 });})
+
+
