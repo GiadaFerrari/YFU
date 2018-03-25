@@ -1,12 +1,14 @@
 /*header redirect*/
 
-$('header').on('click', ()=>{window.location.href = "index.html"})
+$('.logo').on('click', ()=>{window.location.href = "index.html"})
+$('.home').on('click', ()=>{window.location.href = "index.html"})
 
 
 /*burger menu*/
 
 $('.burger').on('click', ()=>{  window.location.href = "burger.html"
 })
+
 
 
 /*template handling*/
@@ -18,7 +20,6 @@ goDest.click((c) => {
         $('.fay').addClass('fadeMe')
         $('.fay').on('animationend', () => {
 
-            document.querySelector('.mainMap').style.cssText = "display: none;"
             let header = document.querySelector('header');
             header.nextElementSibling.classList.add('whiteMe');
 
@@ -44,14 +45,17 @@ goDest.click((c) => {
         })
         let clicked = c.target
          function create(elem) {
+             console.log(clicked)
+
             if ($(clicked).hasClass('usas')) {
+                console.log('usa')
                 const mainTemplate = document.querySelector('.country').content;
                 const myClone = mainTemplate.cloneNode(true);
 
                 myClone.querySelectorAll('svg').forEach((s)=>{
                                                         s.style.cssText = "stroke:" + elem[0].color;
                 console.log('colorset')})
-                myClone.querySelector('source').setAttribute('src', elem[0].video)
+                myClone.querySelector('.source').setAttribute('src', elem[0].video)
 
                 let video = myClone.querySelector('video')
 let play = document.querySelector('.play')
@@ -82,8 +86,9 @@ function goBack(){
 }
 
 
-                  myClone.querySelectorAll('.name').forEach( (name)=> {name.textContent = elem[0].country;})
-                 myClone.querySelector('.name').style.cssText = "color:" + elem[0].color + ";"
+                myClone.querySelectorAll('.name').forEach( (name)=> {name.textContent = elem[0].country;})
+                document.querySelector('.logo').style.cssText = "fill:" + elem[0].color+";"
+                myClone.querySelector('.name').style.cssText = "color:" + elem[0].color + ";"
                 myClone.querySelector('h1').style.cssText = "color:" + elem[0].color + ";"
                 myClone.querySelector('.capital').textContent = elem[0].capital;
                 myClone.querySelector('.lan').textContent = elem[0].lan;
@@ -91,24 +96,14 @@ function goBack(){
                 myClone.querySelector('.foody').textContent = elem[0].foody;
                 myClone.querySelector('.quote').textContent = elem[0].quote;
                 myClone.querySelector('.intro').textContent = elem[0].intro;
+                myClone.querySelector('.main').style.cssText = "background-image:url(" + elem[0].left+");";
+                myClone.querySelector('.top').style.cssText = "background-image:url(" + elem[0].top+");";
+                myClone.querySelector('.bottom').style.cssText = "background-image:url(" + elem[0].bottom +");";
+                myClone.querySelector('.right').style.cssText = "background-image: url(" + elem[0].right + ");";
+                myClone.querySelector('.left').style.cssText = "background-image: url(" + elem[0].main + ");";
                 myClone.querySelectorAll('.ambassador').forEach((amb) => {
                     amb.textContent = elem[0].ambassador;})
-             /*   elem[0].monthPost.forEach((p) => {
-                let instaLink = document.createElement('a');
-                let instaImg = document.createElement('img');
 
-                    instaLink.setAttribute("href" , "" +elem[0].instaLink+"");
-                    instaLink.classList.add("instaLink");
-                    instaImg.setAttribute("src", p);
-                    instaImg.classList.add('instaImg');
-
-                            const appendPost = myClone.querySelector('.posts')
-        appendPost.appendChild(instaLink);
-        instaLink.appendChild(instaImg);
-
-
-
-                })*/
                      const appendT = document.querySelector('.append');
 
                 appendT.appendChild(myClone);
